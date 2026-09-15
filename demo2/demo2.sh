@@ -45,7 +45,7 @@ pause
 show-msg "Validate against the default Conforma policy:"
 
 show-pause-run 'ec validate image \
-  --json-input snapshot.json \
+  --images snapshot.json \
   --policy github.com/conforma/config//default \
   --public-key cosign.pub \
   --ignore-rekor \
@@ -83,7 +83,7 @@ pause
 show-msg "The signature is valid. The attestation is valid. But the source does not match:"
 
 show-pause-run 'ec validate image \
-  --json-input bad-snapshot.json \
+  --images bad-snapshot.json \
   --policy github.com/conforma/config//default \
   --public-key cosign.pub \
   --ignore-rekor \
