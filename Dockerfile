@@ -19,8 +19,6 @@ RUN wget https://github.com/conforma/cli/releases/latest/download/ec_linux_amd64
 
 WORKDIR /demos
 
-ENV BAT_THEME=Coldark-Cold
-
 COPY demo1/ /demos/demo1/
 COPY demo2/ /demos/demo2/
 COPY demo3/ /demos/demo3/
