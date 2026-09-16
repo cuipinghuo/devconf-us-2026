@@ -34,6 +34,12 @@ Build the Docker image:
 docker build -t devconf-conforma-demo .
 ```
 
+or
+
+```bash
+make build
+```
+
 Run a specific demo (1-4):
 
 ```bash
@@ -43,6 +49,15 @@ docker run -it devconf-conforma-demo 3
 docker run -it devconf-conforma-demo 4
 ```
 
+or
+
+```bash
+make demo-1
+make demo-2
+make demo-3
+make demo-4
+```
+
 ### Running Locally
 
 Run any demo script from its directory:
@@ -50,6 +65,12 @@ Run any demo script from its directory:
 ```bash
 cd demo1
 ./demo1.sh
+```
+
+or
+
+```bash
+make run-1
 ```
 
 **Required Tools:**
