@@ -1,0 +1,59 @@
+Success: false
+Result: FAILURE
+Violations: 3, Warnings: 0, Successes: 18
+
+Components:
+- Name: golden-container
+  ImageRef: quay.io/konflux-ci/ec-golden-image@sha256:ffffb976664b21fa8239a192bdea97ad6f54067dcbecb104bcad4368e9fd7585
+  Violations: 1, Warnings: 0, Successes: 6
+
+- Name: golden-container-sha256:ee69afea9d2e9245401e85c6fdf97d0457bcfd61ba79577e6bbf91550c8ee679-amd64
+  ImageRef: quay.io/konflux-ci/ec-golden-image@sha256:ee69afea9d2e9245401e85c6fdf97d0457bcfd61ba79577e6bbf91550c8ee679
+  Violations: 1, Warnings: 0, Successes: 6
+
+- Name: golden-container-sha256:24f2fe4d459664bba4021b002b6cb961942c1cb20f4e20a87849b3eddf24455d-arm64
+  ImageRef: quay.io/konflux-ci/ec-golden-image@sha256:24f2fe4d459664bba4021b002b6cb961942c1cb20f4e20a87849b3eddf24455d
+  Violations: 1, Warnings: 0, Successes: 6
+
+Results:
+\e[0;31m✕ [Violation]\e[0m slsa_source_correlated.expected_source_code_reference
+  ImageRef: quay.io/konflux-ci/ec-golden-image@sha256:ffffb976664b21fa8239a192bdea97ad6f54067dcbecb104bcad4368e9fd7585
+  Reason: The expected source code reference "git+https://github.com/miscreant/mischief@cafebabe" is not attested
+  Term: git+https://github.com/conforma/golden-container.git@sha1:6d86393776731b09c3a45aa233fe7f1edbabdc5f
+  Title: Expected source code reference
+  Description: Verify that the provided source code reference is the one being attested. To exclude this rule add
+  "slsa_source_correlated.expected_source_code_reference:git+https://github.com/conforma/golden-container.git@sha1:6d86393776731b09c3a45aa233fe7f1edbabdc5f"
+  to the `exclude` section of the policy configuration.
+  Solution: The source code reference in the attestation doesn't match the expected and provided source code reference. Make sure
+  that the provided source code reference is correct, and if it is make sure that the build process is configured to retrieve the
+  source code from the appropriate source code repository. Make sure that the source code reference is pointing to a explicit
+  revision not to a symbolic identifier, e.g. a branch or tag name.
+
+\e[0;31m✕ [Violation]\e[0m slsa_source_correlated.expected_source_code_reference
+  ImageRef: quay.io/konflux-ci/ec-golden-image@sha256:ee69afea9d2e9245401e85c6fdf97d0457bcfd61ba79577e6bbf91550c8ee679
+  Reason: The expected source code reference "git+https://github.com/miscreant/mischief@cafebabe" is not attested
+  Term: git+https://github.com/conforma/golden-container.git@sha1:6d86393776731b09c3a45aa233fe7f1edbabdc5f
+  Title: Expected source code reference
+  Description: Verify that the provided source code reference is the one being attested. To exclude this rule add
+  "slsa_source_correlated.expected_source_code_reference:git+https://github.com/conforma/golden-container.git@sha1:6d86393776731b09c3a45aa233fe7f1edbabdc5f"
+  to the `exclude` section of the policy configuration.
+  Solution: The source code reference in the attestation doesn't match the expected and provided source code reference. Make sure
+  that the provided source code reference is correct, and if it is make sure that the build process is configured to retrieve the
+  source code from the appropriate source code repository. Make sure that the source code reference is pointing to a explicit
+  revision not to a symbolic identifier, e.g. a branch or tag name.
+
+\e[0;31m✕ [Violation]\e[0m slsa_source_correlated.expected_source_code_reference
+  ImageRef: quay.io/konflux-ci/ec-golden-image@sha256:24f2fe4d459664bba4021b002b6cb961942c1cb20f4e20a87849b3eddf24455d
+  Reason: The expected source code reference "git+https://github.com/miscreant/mischief@cafebabe" is not attested
+  Term: git+https://github.com/conforma/golden-container.git@sha1:6d86393776731b09c3a45aa233fe7f1edbabdc5f
+  Title: Expected source code reference
+  Description: Verify that the provided source code reference is the one being attested. To exclude this rule add
+  "slsa_source_correlated.expected_source_code_reference:git+https://github.com/conforma/golden-container.git@sha1:6d86393776731b09c3a45aa233fe7f1edbabdc5f"
+  to the `exclude` section of the policy configuration.
+  Solution: The source code reference in the attestation doesn't match the expected and provided source code reference. Make sure
+  that the provided source code reference is correct, and if it is make sure that the build process is configured to retrieve the
+  source code from the appropriate source code repository. Make sure that the source code reference is pointing to a explicit
+  revision not to a symbolic identifier, e.g. a branch or tag name.
+
+Error: success criteria not met
+Exit code: 1
