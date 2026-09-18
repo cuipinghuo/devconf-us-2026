@@ -6,7 +6,9 @@ IMAGE="quay.io/konflux-ci/ec-golden-image:latest"
 
 # Fetch the latest commit SHA from the golden container repo
 GIT_REPO="conforma/golden-container"
-GIT_SHA=$(curl -s "https://api.github.com/repos/${GIT_REPO}/commits?per_page=1" | jq -r '.[0].sha')
+# Pinned to match the pre-recorded ec output (resources/honest-run.txt, bad-run.txt),
+# so the demo runs fully offline. Re-record those files if you bump this.
+GIT_SHA="6d86393776731b09c3a45aa233fe7f1edbabdc5f"
 
 PUBLIC_KEY="-----BEGIN PUBLIC KEY-----
 MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEZP/0htjhVt2y0ohjgtIIgICOtQtA
@@ -42,16 +44,34 @@ show-json snapshot.json
 
 pause
 
-show-msg "Validate against the default Conforma policy:"
+show-msg "The default policy has 170+ rules. For this demo we focus on the source-correlation package."
 
-show-pause-run 'ec validate image \
+create-file policy.yaml 'sources:
+  - name: Source correlation only
+    policy:
+      - github.com/conforma/policy//policy/lib
+      - github.com/conforma/policy//policy/release
+    config:
+      include:
+        - slsa_source_correlated
+      exclude: []
+'
+
+show-yaml policy.yaml -H8
+
+pause
+
+show-msg "Validate the honest snapshot (source matches the signed provenance):"
+
+# Pre-recorded output so the live demo does not wait on the image pull here.
+show-pause-fake 'ec validate image \
   --images snapshot.json \
-  --policy github.com/conforma/config//default \
+  --policy policy.yaml \
   --public-key cosign.pub \
   --ignore-rekor \
   --show-successes \
   --info; \
-  echo "Exit code: $?"'
+  echo "Exit code: $?"' "$(cat honest-run.txt)"
 
 h1 "Source correlation attack"
 
@@ -82,12 +102,13 @@ pause
 
 show-msg "The signature is valid. The attestation is valid. But the source does not match:"
 
-show-pause-run 'ec validate image \
+# Pre-recorded output so the live demo does not wait on the image pull here.
+show-pause-fake 'ec validate image \
   --images bad-snapshot.json \
-  --policy github.com/conforma/config//default \
+  --policy policy.yaml \
   --public-key cosign.pub \
   --ignore-rekor \
   --info; \
-  echo "Exit code: $?"'
+  echo "Exit code: $?"' "$(cat bad-run.txt)"
 
 show-msg "Signed does not mean trusted. Without policy enforcement, this mismatch flies through."
