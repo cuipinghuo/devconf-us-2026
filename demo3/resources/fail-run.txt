@@ -1,0 +1,41 @@
+Success: false
+Result: FAILURE
+Violations: 3, Warnings: 0, Successes: 9
+
+Components:
+- Name: Unnamed
+  ImageRef: quay.io/konflux-ci/ec-golden-image@sha256:ffffb976664b21fa8239a192bdea97ad6f54067dcbecb104bcad4368e9fd7585
+  Violations: 1, Warnings: 0, Successes: 3
+
+- Name: Unnamed-sha256:ee69afea9d2e9245401e85c6fdf97d0457bcfd61ba79577e6bbf91550c8ee679-amd64
+  ImageRef: quay.io/konflux-ci/ec-golden-image@sha256:ee69afea9d2e9245401e85c6fdf97d0457bcfd61ba79577e6bbf91550c8ee679
+  Violations: 1, Warnings: 0, Successes: 3
+
+- Name: Unnamed-sha256:24f2fe4d459664bba4021b002b6cb961942c1cb20f4e20a87849b3eddf24455d-arm64
+  ImageRef: quay.io/konflux-ci/ec-golden-image@sha256:24f2fe4d459664bba4021b002b6cb961942c1cb20f4e20a87849b3eddf24455d
+  Violations: 1, Warnings: 0, Successes: 3
+
+Results:
+\e[31m✕\e[0m \e[31m[Violation] custom.git_origin_restriction\e[0m
+  ImageRef: quay.io/konflux-ci/ec-golden-image@sha256:ffffb976664b21fa8239a192bdea97ad6f54067dcbecb104bcad4368e9fd7585
+  Reason: Source code did not originate from the acme-org GitHub organization
+  Title: Restrictions on GitHub origins
+  Description: Verify that the source code originates from an allowed GitHub organization, as specified in ruleData. To exclude
+  this rule add "custom.git_origin_restriction" to the `exclude` section of the policy configuration.
+
+\e[31m✕\e[0m \e[31m[Violation] custom.git_origin_restriction\e[0m
+  ImageRef: quay.io/konflux-ci/ec-golden-image@sha256:ee69afea9d2e9245401e85c6fdf97d0457bcfd61ba79577e6bbf91550c8ee679
+  Reason: Source code did not originate from the acme-org GitHub organization
+  Title: Restrictions on GitHub origins
+  Description: Verify that the source code originates from an allowed GitHub organization, as specified in ruleData. To exclude
+  this rule add "custom.git_origin_restriction" to the `exclude` section of the policy configuration.
+
+\e[31m✕\e[0m \e[31m[Violation] custom.git_origin_restriction\e[0m
+  ImageRef: quay.io/konflux-ci/ec-golden-image@sha256:24f2fe4d459664bba4021b002b6cb961942c1cb20f4e20a87849b3eddf24455d
+  Reason: Source code did not originate from the acme-org GitHub organization
+  Title: Restrictions on GitHub origins
+  Description: Verify that the source code originates from an allowed GitHub organization, as specified in ruleData. To exclude
+  this rule add "custom.git_origin_restriction" to the `exclude` section of the policy configuration.
+
+Error: success criteria not met
+Exit code: 1

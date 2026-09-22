@@ -16,110 +16,110 @@ Components:
   Violations: 0, Warnings: 0, Successes: 7
 
 Results:
-\e[0;32m✓ [Success]\e[0m builtin.attestation.signature_check
+\e[32m✓\e[0m \e[32m[Success] builtin.attestation.signature_check\e[0m
   ImageRef: quay.io/konflux-ci/ec-golden-image@sha256:ffffb976664b21fa8239a192bdea97ad6f54067dcbecb104bcad4368e9fd7585
   Title: Attestation signature check passed
   Description: The attestation signature matches available signing materials.
 
-\e[0;32m✓ [Success]\e[0m builtin.attestation.syntax_check
+\e[32m✓\e[0m \e[32m[Success] builtin.attestation.syntax_check\e[0m
   ImageRef: quay.io/konflux-ci/ec-golden-image@sha256:ffffb976664b21fa8239a192bdea97ad6f54067dcbecb104bcad4368e9fd7585
   Title: Attestation syntax check passed
   Description: The attestation has correct syntax.
 
-\e[0;32m✓ [Success]\e[0m builtin.image.signature_check
+\e[32m✓\e[0m \e[32m[Success] builtin.image.signature_check\e[0m
   ImageRef: quay.io/konflux-ci/ec-golden-image@sha256:ffffb976664b21fa8239a192bdea97ad6f54067dcbecb104bcad4368e9fd7585
   Title: Image signature check passed
   Description: The image signature matches available signing materials.
 
-\e[0;32m✓ [Success]\e[0m slsa_source_correlated.attested_source_code_reference
+\e[32m✓\e[0m \e[32m[Success] slsa_source_correlated.attested_source_code_reference\e[0m
   ImageRef: quay.io/konflux-ci/ec-golden-image@sha256:ffffb976664b21fa8239a192bdea97ad6f54067dcbecb104bcad4368e9fd7585
   Title: Source reference
   Description: Attestation contains source reference.
 
-\e[0;32m✓ [Success]\e[0m slsa_source_correlated.expected_source_code_reference
+\e[32m✓\e[0m \e[32m[Success] slsa_source_correlated.expected_source_code_reference\e[0m
   ImageRef: quay.io/konflux-ci/ec-golden-image@sha256:ffffb976664b21fa8239a192bdea97ad6f54067dcbecb104bcad4368e9fd7585
   Title: Expected source code reference
   Description: Verify that the provided source code reference is the one being attested.
 
-\e[0;32m✓ [Success]\e[0m slsa_source_correlated.rule_data_provided
+\e[32m✓\e[0m \e[32m[Success] slsa_source_correlated.rule_data_provided\e[0m
   ImageRef: quay.io/konflux-ci/ec-golden-image@sha256:ffffb976664b21fa8239a192bdea97ad6f54067dcbecb104bcad4368e9fd7585
   Title: Rule data provided
   Description: Confirm the expected rule data keys have been provided in the expected format. The keys are `supported_vcs` and
   `supported_digests`.
 
-\e[0;32m✓ [Success]\e[0m slsa_source_correlated.source_code_reference_provided
+\e[32m✓\e[0m \e[32m[Success] slsa_source_correlated.source_code_reference_provided\e[0m
   ImageRef: quay.io/konflux-ci/ec-golden-image@sha256:ffffb976664b21fa8239a192bdea97ad6f54067dcbecb104bcad4368e9fd7585
   Title: Source code reference provided
   Description: Check if the expected source code reference is provided.
 
-\e[0;32m✓ [Success]\e[0m builtin.attestation.signature_check
+\e[32m✓\e[0m \e[32m[Success] builtin.attestation.signature_check\e[0m
   ImageRef: quay.io/konflux-ci/ec-golden-image@sha256:ee69afea9d2e9245401e85c6fdf97d0457bcfd61ba79577e6bbf91550c8ee679
   Title: Attestation signature check passed
   Description: The attestation signature matches available signing materials.
 
-\e[0;32m✓ [Success]\e[0m builtin.attestation.syntax_check
+\e[32m✓\e[0m \e[32m[Success] builtin.attestation.syntax_check\e[0m
   ImageRef: quay.io/konflux-ci/ec-golden-image@sha256:ee69afea9d2e9245401e85c6fdf97d0457bcfd61ba79577e6bbf91550c8ee679
   Title: Attestation syntax check passed
   Description: The attestation has correct syntax.
 
-\e[0;32m✓ [Success]\e[0m builtin.image.signature_check
+\e[32m✓\e[0m \e[32m[Success] builtin.image.signature_check\e[0m
   ImageRef: quay.io/konflux-ci/ec-golden-image@sha256:ee69afea9d2e9245401e85c6fdf97d0457bcfd61ba79577e6bbf91550c8ee679
   Title: Image signature check passed
   Description: The image signature matches available signing materials.
 
-\e[0;32m✓ [Success]\e[0m slsa_source_correlated.attested_source_code_reference
+\e[32m✓\e[0m \e[32m[Success] slsa_source_correlated.attested_source_code_reference\e[0m
   ImageRef: quay.io/konflux-ci/ec-golden-image@sha256:ee69afea9d2e9245401e85c6fdf97d0457bcfd61ba79577e6bbf91550c8ee679
   Title: Source reference
   Description: Attestation contains source reference.
 
-\e[0;32m✓ [Success]\e[0m slsa_source_correlated.expected_source_code_reference
+\e[32m✓\e[0m \e[32m[Success] slsa_source_correlated.expected_source_code_reference\e[0m
   ImageRef: quay.io/konflux-ci/ec-golden-image@sha256:ee69afea9d2e9245401e85c6fdf97d0457bcfd61ba79577e6bbf91550c8ee679
   Title: Expected source code reference
   Description: Verify that the provided source code reference is the one being attested.
 
-\e[0;32m✓ [Success]\e[0m slsa_source_correlated.rule_data_provided
+\e[32m✓\e[0m \e[32m[Success] slsa_source_correlated.rule_data_provided\e[0m
   ImageRef: quay.io/konflux-ci/ec-golden-image@sha256:ee69afea9d2e9245401e85c6fdf97d0457bcfd61ba79577e6bbf91550c8ee679
   Title: Rule data provided
   Description: Confirm the expected rule data keys have been provided in the expected format. The keys are `supported_vcs` and
   `supported_digests`.
 
-\e[0;32m✓ [Success]\e[0m slsa_source_correlated.source_code_reference_provided
+\e[32m✓\e[0m \e[32m[Success] slsa_source_correlated.source_code_reference_provided\e[0m
   ImageRef: quay.io/konflux-ci/ec-golden-image@sha256:ee69afea9d2e9245401e85c6fdf97d0457bcfd61ba79577e6bbf91550c8ee679
   Title: Source code reference provided
   Description: Check if the expected source code reference is provided.
 
-\e[0;32m✓ [Success]\e[0m builtin.attestation.signature_check
+\e[32m✓\e[0m \e[32m[Success] builtin.attestation.signature_check\e[0m
   ImageRef: quay.io/konflux-ci/ec-golden-image@sha256:24f2fe4d459664bba4021b002b6cb961942c1cb20f4e20a87849b3eddf24455d
   Title: Attestation signature check passed
   Description: The attestation signature matches available signing materials.
 
-\e[0;32m✓ [Success]\e[0m builtin.attestation.syntax_check
+\e[32m✓\e[0m \e[32m[Success] builtin.attestation.syntax_check\e[0m
   ImageRef: quay.io/konflux-ci/ec-golden-image@sha256:24f2fe4d459664bba4021b002b6cb961942c1cb20f4e20a87849b3eddf24455d
   Title: Attestation syntax check passed
   Description: The attestation has correct syntax.
 
-\e[0;32m✓ [Success]\e[0m builtin.image.signature_check
+\e[32m✓\e[0m \e[32m[Success] builtin.image.signature_check\e[0m
   ImageRef: quay.io/konflux-ci/ec-golden-image@sha256:24f2fe4d459664bba4021b002b6cb961942c1cb20f4e20a87849b3eddf24455d
   Title: Image signature check passed
   Description: The image signature matches available signing materials.
 
-\e[0;32m✓ [Success]\e[0m slsa_source_correlated.attested_source_code_reference
+\e[32m✓\e[0m \e[32m[Success] slsa_source_correlated.attested_source_code_reference\e[0m
   ImageRef: quay.io/konflux-ci/ec-golden-image@sha256:24f2fe4d459664bba4021b002b6cb961942c1cb20f4e20a87849b3eddf24455d
   Title: Source reference
   Description: Attestation contains source reference.
 
-\e[0;32m✓ [Success]\e[0m slsa_source_correlated.expected_source_code_reference
+\e[32m✓\e[0m \e[32m[Success] slsa_source_correlated.expected_source_code_reference\e[0m
   ImageRef: quay.io/konflux-ci/ec-golden-image@sha256:24f2fe4d459664bba4021b002b6cb961942c1cb20f4e20a87849b3eddf24455d
   Title: Expected source code reference
   Description: Verify that the provided source code reference is the one being attested.
 
-\e[0;32m✓ [Success]\e[0m slsa_source_correlated.rule_data_provided
+\e[32m✓\e[0m \e[32m[Success] slsa_source_correlated.rule_data_provided\e[0m
   ImageRef: quay.io/konflux-ci/ec-golden-image@sha256:24f2fe4d459664bba4021b002b6cb961942c1cb20f4e20a87849b3eddf24455d
   Title: Rule data provided
   Description: Confirm the expected rule data keys have been provided in the expected format. The keys are `supported_vcs` and
   `supported_digests`.
 
-\e[0;32m✓ [Success]\e[0m slsa_source_correlated.source_code_reference_provided
+\e[32m✓\e[0m \e[32m[Success] slsa_source_correlated.source_code_reference_provided\e[0m
   ImageRef: quay.io/konflux-ci/ec-golden-image@sha256:24f2fe4d459664bba4021b002b6cb961942c1cb20f4e20a87849b3eddf24455d
   Title: Source code reference provided
   Description: Check if the expected source code reference is provided.

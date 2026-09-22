@@ -16,7 +16,7 @@ Components:
   Violations: 1, Warnings: 0, Successes: 6
 
 Results:
-\e[0;31m✕ [Violation]\e[0m slsa_source_correlated.expected_source_code_reference
+\e[31m✕\e[0m \e[31m[Violation] slsa_source_correlated.expected_source_code_reference\e[0m
   ImageRef: quay.io/konflux-ci/ec-golden-image@sha256:ffffb976664b21fa8239a192bdea97ad6f54067dcbecb104bcad4368e9fd7585
   Reason: The expected source code reference "git+https://github.com/miscreant/mischief@cafebabe" is not attested
   Term: git+https://github.com/conforma/golden-container.git@sha1:6d86393776731b09c3a45aa233fe7f1edbabdc5f
@@ -29,7 +29,7 @@ Results:
   source code from the appropriate source code repository. Make sure that the source code reference is pointing to a explicit
   revision not to a symbolic identifier, e.g. a branch or tag name.
 
-\e[0;31m✕ [Violation]\e[0m slsa_source_correlated.expected_source_code_reference
+\e[31m✕\e[0m \e[31m[Violation] slsa_source_correlated.expected_source_code_reference\e[0m
   ImageRef: quay.io/konflux-ci/ec-golden-image@sha256:ee69afea9d2e9245401e85c6fdf97d0457bcfd61ba79577e6bbf91550c8ee679
   Reason: The expected source code reference "git+https://github.com/miscreant/mischief@cafebabe" is not attested
   Term: git+https://github.com/conforma/golden-container.git@sha1:6d86393776731b09c3a45aa233fe7f1edbabdc5f
@@ -42,7 +42,7 @@ Results:
   source code from the appropriate source code repository. Make sure that the source code reference is pointing to a explicit
   revision not to a symbolic identifier, e.g. a branch or tag name.
 
-\e[0;31m✕ [Violation]\e[0m slsa_source_correlated.expected_source_code_reference
+\e[31m✕\e[0m \e[31m[Violation] slsa_source_correlated.expected_source_code_reference\e[0m
   ImageRef: quay.io/konflux-ci/ec-golden-image@sha256:24f2fe4d459664bba4021b002b6cb961942c1cb20f4e20a87849b3eddf24455d
   Reason: The expected source code reference "git+https://github.com/miscreant/mischief@cafebabe" is not attested
   Term: git+https://github.com/conforma/golden-container.git@sha1:6d86393776731b09c3a45aa233fe7f1edbabdc5f

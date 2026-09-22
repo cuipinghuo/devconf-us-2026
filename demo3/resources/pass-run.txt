@@ -1,0 +1,79 @@
+Success: true
+Result: SUCCESS
+Violations: 0, Warnings: 0, Successes: 12
+
+Components:
+- Name: Unnamed
+  ImageRef: quay.io/konflux-ci/ec-golden-image@sha256:ffffb976664b21fa8239a192bdea97ad6f54067dcbecb104bcad4368e9fd7585
+  Violations: 0, Warnings: 0, Successes: 4
+
+- Name: Unnamed-sha256:ee69afea9d2e9245401e85c6fdf97d0457bcfd61ba79577e6bbf91550c8ee679-amd64
+  ImageRef: quay.io/konflux-ci/ec-golden-image@sha256:ee69afea9d2e9245401e85c6fdf97d0457bcfd61ba79577e6bbf91550c8ee679
+  Violations: 0, Warnings: 0, Successes: 4
+
+- Name: Unnamed-sha256:24f2fe4d459664bba4021b002b6cb961942c1cb20f4e20a87849b3eddf24455d-arm64
+  ImageRef: quay.io/konflux-ci/ec-golden-image@sha256:24f2fe4d459664bba4021b002b6cb961942c1cb20f4e20a87849b3eddf24455d
+  Violations: 0, Warnings: 0, Successes: 4
+
+Results:
+\e[32m✓\e[0m \e[32m[Success] builtin.attestation.signature_check\e[0m
+  ImageRef: quay.io/konflux-ci/ec-golden-image@sha256:ffffb976664b21fa8239a192bdea97ad6f54067dcbecb104bcad4368e9fd7585
+  Title: Attestation signature check passed
+  Description: The attestation signature matches available signing materials.
+
+\e[32m✓\e[0m \e[32m[Success] builtin.attestation.syntax_check\e[0m
+  ImageRef: quay.io/konflux-ci/ec-golden-image@sha256:ffffb976664b21fa8239a192bdea97ad6f54067dcbecb104bcad4368e9fd7585
+  Title: Attestation syntax check passed
+  Description: The attestation has correct syntax.
+
+\e[32m✓\e[0m \e[32m[Success] builtin.image.signature_check\e[0m
+  ImageRef: quay.io/konflux-ci/ec-golden-image@sha256:ffffb976664b21fa8239a192bdea97ad6f54067dcbecb104bcad4368e9fd7585
+  Title: Image signature check passed
+  Description: The image signature matches available signing materials.
+
+\e[32m✓\e[0m \e[32m[Success] custom.git_origin_restriction\e[0m
+  ImageRef: quay.io/konflux-ci/ec-golden-image@sha256:ffffb976664b21fa8239a192bdea97ad6f54067dcbecb104bcad4368e9fd7585
+  Title: Restrictions on GitHub origins
+  Description: Verify that the source code originates from an allowed GitHub organization, as specified in ruleData.
+
+\e[32m✓\e[0m \e[32m[Success] builtin.attestation.signature_check\e[0m
+  ImageRef: quay.io/konflux-ci/ec-golden-image@sha256:ee69afea9d2e9245401e85c6fdf97d0457bcfd61ba79577e6bbf91550c8ee679
+  Title: Attestation signature check passed
+  Description: The attestation signature matches available signing materials.
+
+\e[32m✓\e[0m \e[32m[Success] builtin.attestation.syntax_check\e[0m
+  ImageRef: quay.io/konflux-ci/ec-golden-image@sha256:ee69afea9d2e9245401e85c6fdf97d0457bcfd61ba79577e6bbf91550c8ee679
+  Title: Attestation syntax check passed
+  Description: The attestation has correct syntax.
+
+\e[32m✓\e[0m \e[32m[Success] builtin.image.signature_check\e[0m
+  ImageRef: quay.io/konflux-ci/ec-golden-image@sha256:ee69afea9d2e9245401e85c6fdf97d0457bcfd61ba79577e6bbf91550c8ee679
+  Title: Image signature check passed
+  Description: The image signature matches available signing materials.
+
+\e[32m✓\e[0m \e[32m[Success] custom.git_origin_restriction\e[0m
+  ImageRef: quay.io/konflux-ci/ec-golden-image@sha256:ee69afea9d2e9245401e85c6fdf97d0457bcfd61ba79577e6bbf91550c8ee679
+  Title: Restrictions on GitHub origins
+  Description: Verify that the source code originates from an allowed GitHub organization, as specified in ruleData.
+
+\e[32m✓\e[0m \e[32m[Success] builtin.attestation.signature_check\e[0m
+  ImageRef: quay.io/konflux-ci/ec-golden-image@sha256:24f2fe4d459664bba4021b002b6cb961942c1cb20f4e20a87849b3eddf24455d
+  Title: Attestation signature check passed
+  Description: The attestation signature matches available signing materials.
+
+\e[32m✓\e[0m \e[32m[Success] builtin.attestation.syntax_check\e[0m
+  ImageRef: quay.io/konflux-ci/ec-golden-image@sha256:24f2fe4d459664bba4021b002b6cb961942c1cb20f4e20a87849b3eddf24455d
+  Title: Attestation syntax check passed
+  Description: The attestation has correct syntax.
+
+\e[32m✓\e[0m \e[32m[Success] builtin.image.signature_check\e[0m
+  ImageRef: quay.io/konflux-ci/ec-golden-image@sha256:24f2fe4d459664bba4021b002b6cb961942c1cb20f4e20a87849b3eddf24455d
+  Title: Image signature check passed
+  Description: The image signature matches available signing materials.
+
+\e[32m✓\e[0m \e[32m[Success] custom.git_origin_restriction\e[0m
+  ImageRef: quay.io/konflux-ci/ec-golden-image@sha256:24f2fe4d459664bba4021b002b6cb961942c1cb20f4e20a87849b3eddf24455d
+  Title: Restrictions on GitHub origins
+  Description: Verify that the source code originates from an allowed GitHub organization, as specified in ruleData.
+
+Exit code: 0
