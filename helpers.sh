@@ -82,11 +82,13 @@ function show-pause-run() {
 # Show a command, pause, then print pre-crafted output instead of running it.
 # Use for steps that would otherwise pull a large image / hit the network live.
 # The output string is printed with `printf %b`, so \e[..m color codes work.
+# A short delay after the pause makes it feel like the command is working.
 function show-pause-fake() {
   local cmd="$1"
   local output="$2"
   show-cmd "$cmd"
   pause
+  sleep 2
   printf '%b\n' "$output"
 }
 
