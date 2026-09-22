@@ -2,7 +2,9 @@
 set -euo pipefail
 source ../helpers.sh
 
-IMAGE="quay.io/konflux-ci/ec-golden-image:latest"
+# Pinned by digest to match the pre-recorded ec output (resources/pass-run.txt,
+# fail-run.txt), so the demo stays truthful. Re-record those files if you bump this.
+IMAGE="quay.io/konflux-ci/ec-golden-image@sha256:ffffb976664b21fa8239a192bdea97ad6f54067dcbecb104bcad4368e9fd7585"
 
 PUBLIC_KEY="-----BEGIN PUBLIC KEY-----
 MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEZP/0htjhVt2y0ohjgtIIgICOtQtA
