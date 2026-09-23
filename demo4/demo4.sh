@@ -2,7 +2,7 @@
 set -euo pipefail
 source ../helpers.sh
 
-h1 "Grace periods with effective_on"
+h1 "Demo 4: Grace periods with effective_on"
 
 show-msg "Deploy new rules as warnings first. They become violations on a date you pick."
 
@@ -27,10 +27,10 @@ create-file rules/future.rego 'package main
 
 # METADATA
 # title: Future requirement
-# description: This rule will be enforced starting 2099-01-01.
+# description: This rule will be enforced starting 2026-11-01.
 # custom:
 #   short_name: future_check
-#   effective_on: "2099-01-01T00:00:00Z"
+#   effective_on: "2026-11-01T00:00:00Z"
 #   solution: Prepare for this upcoming requirement.
 #
 deny contains result if {
@@ -69,7 +69,7 @@ show-pause-run 'ec validate input \
   --file input.yaml \
   --policy policy.yaml \
   --info \
-  --effective-time 2100-01-01T12:00:00Z; \
+  --effective-time 2026-12-01T12:00:00Z; \
   echo "Exit code: $?"'
 
 show-msg "Same rule, same data. Today it warns, on the date it blocks. No flag-day surprises."

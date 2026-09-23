@@ -17,7 +17,7 @@ naYJRuLprwIv6FDhZ5yFjYUEtsmoNcW7rx2KM6FOXGsCX3BNc7qhHELT+g==
 
 echo "$PUBLIC_KEY" > cosign.pub
 
-h1 "Validating a real container image"
+h1 "Demo 2: Validating a real container image"
 
 show-msg "We are validating a real image built in Konflux with real signatures and attestations"
 

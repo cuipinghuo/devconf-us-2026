@@ -2,7 +2,7 @@
 set -euo pipefail
 source ../helpers.sh
 
-h1 "Validating structured data with Conforma"
+h1 "Demo 1: Validating structured data with Conforma"
 
 pause
 
