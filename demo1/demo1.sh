@@ -9,10 +9,12 @@ pause
 show-msg "A simple YAML file with some animals:"
 
 create-file input.yaml 'animals:
-- name: Charlie
+- name: Bluey
   species: dog
-- name: Luna
+- name: Jiji
   species: cat
+- name: Daffy
+  species: duck
 '
 
 show-yaml input.yaml
@@ -26,11 +28,11 @@ mkdir -p no-cats
 create-file no-cats/main.rego 'package main
 
 # METADATA
-# title: No cats
-# description: Disallow felines.
+# title: No cats!
+# description: Felines must be disallowed.
 # custom:
 #   short_name: no_cats
-#   solution: Ensure no cats are present in the animal list!
+#   solution: Ensure no cats are present in the animal list.
 #
 deny contains result if {
   some animal in input.animals
@@ -42,7 +44,7 @@ deny contains result if {
 }
 '
 
-show-rego no-cats/main.rego -H8 -H10:12
+show-rego no-cats/main.rego -H10:12
 
 pause
 
@@ -78,7 +80,7 @@ show-msg "Replace cat with rabbit:"
 
 show-run 'sed -i "s/cat/rabbit/" input.yaml'
 
-show-yaml input.yaml -H4
+show-yaml input.yaml -H5
 
 pause
 
@@ -98,16 +100,15 @@ show-msg "Let's add a warning rule:"
 append-file no-cats/main.rego '
 
 # METADATA
-# title: Charlie warning
-# description: Charlie is a troublemaker!
+# title: Duck warning
+# description: Beware ducks can be wet and messy
 # custom:
-#   short_name: charlie_watch
-#   solution: Keep a close eye on Charlie.
+#   short_name: duck_alert
 #
 warn contains result if {
   some animal in input.animals
-  animal.name == "Charlie"
-  result := {"code":"main.charlie_watch", "msg":"Charlie is here"}
+  animal.species == "duck"
+  result := {"code":"main.duck_alert", "msg":"A duck is present!"}
 }'
 
 show-rego no-cats/main.rego -r19:
@@ -131,6 +132,7 @@ show-pause-run 'ec validate input \
   --file input.yaml \
   --policy policy.yaml \
   --info \
+  --show-successes \
   --output json | jq .'
 
 h1 "Non-strict mode"
@@ -142,7 +144,7 @@ show-run 'sed -i "s/rabbit/cat/" input.yaml'
 show-pause-run 'ec validate input \
   --file input.yaml \
   --policy policy.yaml \
-  --strict=false > /dev/null; \
+  --strict=false | head -3; \
   echo "Exit code: $?"'
 
 show-msg "Compare with strict (default):"
@@ -150,5 +152,5 @@ show-msg "Compare with strict (default):"
 show-run 'ec validate input \
   --file input.yaml \
   --policy policy.yaml \
-  --strict > /dev/null; \
+  --strict | head -3; \
   echo "Exit code: $?"'
