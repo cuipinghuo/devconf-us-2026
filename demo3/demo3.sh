@@ -13,7 +13,7 @@ naYJRuLprwIv6FDhZ5yFjYUEtsmoNcW7rx2KM6FOXGsCX3BNc7qhHELT+g==
 
 echo "$PUBLIC_KEY" > cosign.pub
 
-h1 "Custom policy with ruleData"
+h1 "Demo 3: Custom policy with ruleData"
 
 show-msg "One rule, different config per team"
 

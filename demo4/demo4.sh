@@ -2,7 +2,7 @@
 set -euo pipefail
 source ../helpers.sh
 
-h1 "Grace periods with effective_on"
+h1 "Demo 4: Grace periods with effective_on"
 
 show-msg "Deploy new rules as warnings first. They become violations on a date you pick."
 
