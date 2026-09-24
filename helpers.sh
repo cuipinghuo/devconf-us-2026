@@ -125,12 +125,12 @@ function run-cmd() {
 
 # Pretty-print a command line
 function show-cmd() {
-  printf "%s\n" "$1"
+  printf "$(ansi yellow)\$$(ansi reset) %s\n" "$1"
 }
 
 # Pretty-print a message
 function show-msg() {
-  printf "───────────────────────────────────────────────────\n\n$(ansi purple)💬 %s$(ansi reset)\n" "$1"
+  printf "───────────────────────────────────────────────────\n\n$(ansi purple)💬 %s$(ansi reset)\n\n" "$1"
 }
 
 # Color output
