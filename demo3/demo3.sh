@@ -21,7 +21,7 @@ pause
 
 show-msg "A Rego rule that restricts which GitHub org the source can come from:"
 
-show-rego rules/github.rego -H14 -H16
+show-rego rules/github.rego
 
 pause
 
@@ -31,7 +31,7 @@ create-file policy.yaml 'sources:
   - policy:
       - ./rules
     ruleData:
-      allowed_github_origins: conforma
+      allowed_github_org: conforma
 '
 
 show-yaml policy.yaml -H5
@@ -54,7 +54,7 @@ h1 "Changing the config"
 
 show-msg "Now change the allowed org to 'acme-org':"
 
-show-run 'yq -i '"'"'.sources[0].ruleData.allowed_github_origins = "acme-org"'"'"' policy.yaml'
+show-run 'yq -i '"'"'.sources[0].ruleData.allowed_github_org = "acme-org"'"'"' policy.yaml'
 
 show-yaml policy.yaml -H5
 

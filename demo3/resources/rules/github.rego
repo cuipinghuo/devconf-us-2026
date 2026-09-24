@@ -2,6 +2,8 @@ package custom
 
 import rego.v1
 
+import data.lib.rule_data
+
 # METADATA
 # title: Restrictions on GitHub origins
 # description: >-
@@ -11,14 +13,16 @@ import rego.v1
 #   short_name: git_origin_restriction
 #
 deny contains result if {
-	allowed_origin := data.rule_data__configuration__.allowed_github_origins
-	allowed_material_uri := sprintf("git+https://github.com/%s/", [allowed_origin])
 	some attestation in input.attestations
-	found := [material |
+	github_materials := [material |
 		some material in attestation.statement.predicate.materials
-		startswith(material.uri, allowed_material_uri)
+		startswith(material.uri, "git+https://github.com/")
 	]
-	count(found) == 0
+	allowed_origin := rule_data.get("allowed_github_org")
+	allowed_material_uri := sprintf("git+https://github.com/%s/", [allowed_org])
+	every material in github_materials {
+		startswith(material.uri, allowed_material_uri)
+	}
 	result := {
 		"code": "custom.git_origin_restriction",
 		"msg": sprintf("Source code did not originate from the %s GitHub organization", [allowed_origin]),
